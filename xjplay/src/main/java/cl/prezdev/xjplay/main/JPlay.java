@@ -272,6 +272,8 @@ public class JPlay extends JFrame implements
         jPanel1 = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
         artistList = new javax.swing.JList();
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         progressBarSong = new javax.swing.JProgressBar();
         loadInfoLabel = new javax.swing.JLabel();
         cancelLoadingButton = new javax.swing.JButton();
@@ -469,6 +471,32 @@ public class JPlay extends JFrame implements
 
         mainTabbedPane.addTab("Artistas", jPanel1);
 
+        jButton1.setText("Json test");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(601, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addContainerGap(251, Short.MAX_VALUE))
+        );
+
+        mainTabbedPane.addTab("Test", jPanel2);
+
         progressBarSong.setBackground(new java.awt.Color(254, 254, 254));
         progressBarSong.setForeground(new java.awt.Color(255, 255, 255));
         progressBarSong.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -563,7 +591,7 @@ public class JPlay extends JFrame implements
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mainTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
+                    .addComponent(mainTabbedPane)
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(backSongLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1006,6 +1034,14 @@ public class JPlay extends JFrame implements
         }
     }//GEN-LAST:event_artistListMouseReleased
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Save save = new Save();
+        
+        save.songs = songs;
+        
+        save.saveToJsonFile();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void loadSave() {
         if (new File(Path.SAVE).exists()) {
             try {
@@ -1156,8 +1192,10 @@ public class JPlay extends JFrame implements
     private javax.swing.JTree explorerTree;
     private javax.swing.JToggleButton favoriteButton;
     private javax.swing.JTree favoritesTree;
+    private javax.swing.JButton jButton1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;

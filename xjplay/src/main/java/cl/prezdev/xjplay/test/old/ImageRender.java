@@ -1,4 +1,4 @@
-package cl.prezdev.xjplay.test;
+package cl.prezdev.xjplay.test.old;
 
 import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;

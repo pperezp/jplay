@@ -12,7 +12,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: cl.prezdev:jplay:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: cl.prezdev:jlog:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.soundlibs:basicplayer:3.0.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.soundlibs:mp3spi:1.9.5.4" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.soundlibs:jlayer:1.0.1.4" level="project" />
@@ -34,5 +33,6 @@
     <orderEntry type="library" name="Maven: org.bouncycastle:bcpg-jdk15on:1.64" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.64" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.64" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
   </component>
 </module>

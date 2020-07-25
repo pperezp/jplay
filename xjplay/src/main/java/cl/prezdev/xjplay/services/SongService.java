@@ -21,7 +21,7 @@ public class SongService {
     public Song getPreviousSong() throws NoSongException {
         if(hasSongs()){
             if(hasCurrentSong()){
-                if(isCurrentSongTheFirstOne()){// La actual, es la primera? --> previous --> última
+                if(isCurrentSongTheFirstOne()){
                     setCurrent(getLastSong());
                 }else{
                     decrementCurrentIndex();
@@ -37,8 +37,31 @@ public class SongService {
         return this.current;
     }
 
+    public Song getNextSong() throws NoSongException {
+        if(hasSongs()){
+            if(hasCurrentSong()){
+                if(isCurrentSongTheLastOne()){
+                    setCurrent(getFirstSong());
+                }else{
+                    increaseCurrentIndex();
+                    setCurrent(this.songs.get(currentIndex));
+                }
+            }else{
+                setCurrent(getFirstSong());
+            }
+        }else{
+            throw new NoSongException();
+        }
+
+        return this.current;
+    }
+
+    private void increaseCurrentIndex() {
+        this.currentIndex++;
+    }
+
     private void decrementCurrentIndex(){
-        this.currentIndex -= 1;
+        this.currentIndex--;
     }
 
     public void setCurrent(Song song){
